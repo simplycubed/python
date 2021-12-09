@@ -2,10 +2,10 @@ steps:
   - name: "gcr.io/cloud-builders/docker"
     args:
       - "build"
-      - "--tag=asia.gcr.io/$PROJECT_ID/python:3.10-slim"
+      - "--tag=asia.gcr.io/$PROJECT_ID/python:3.10-slim-buster"
       - "--file=Dockerfile"
       - "."
     waitFor: ["-"]
 
 images:
-  - "asia.gcr.io/$PROJECT_ID/python:3.10-slim"
+  - "asia.gcr.io/$PROJECT_ID/python:3.10-slim-buster"
